@@ -1,9 +1,7 @@
 var exec = require('cordova/exec');
 
-var splashscreen = {
-    fetch: function() {
-        exec(null, null, "PhotoFetcher", "execute", []);
+module.exports = {
+    fetch: function(resultCallback) {
+        exec(resultCallback, null, "PhotoFetcher", "fetch", []);
     }
 };
-
-module.exports = splashscreen;
